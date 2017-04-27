@@ -1,5 +1,4 @@
 @import 'utility';
-
 $base-text-size: 16px;
 $base-font-family: sans-serif;
 
@@ -15,10 +14,17 @@ body {
 .LetterBar {
   display: flex;
   justify-content: space-around;
+  padding-left: 0;
 
-  li,
-  a {
+  a,
+  li {
     list-style: none;
+    text-decoration: none;
+  }
+}
+
+.Block {
+  a {
     text-decoration: none;
   }
 }

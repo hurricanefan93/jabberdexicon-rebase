@@ -6,7 +6,9 @@ import {
   PanelFooter,
   PanelHeader,
   Space,
-  Text
+  Text,
+  Textarea,
+  Input
 } from 'rebass'
 
 const NewEntry = ({ onDismiss }) =>
@@ -20,6 +22,10 @@ const NewEntry = ({ onDismiss }) =>
         <Space auto />
         <Close onClick={onDismiss} />
       </PanelHeader>
+      <form action='#'>
+        <Input name='term' label='Term' />
+        <Textarea name='definition' label='Definition' />
+      </form>
       <Text>
         Panels are great for visually separating UI, content, or data from the rest of the page.
       </Text>

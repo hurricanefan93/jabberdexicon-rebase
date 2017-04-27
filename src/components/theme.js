@@ -4,114 +4,90 @@ import { config } from 'rebass'
 //  https://github.com/jxnblk/rebass/blob/master/src/config.js
 
 // Examples:
-//  https://github.com/jxnblk/rebass/tree/master/demo/configurations
+ // https://github.com/jxnblk/rebass/tree/master/demo/configurations
 
-const sans = {
-  fontFamily: 'Roboto, sans-serif'
-}
 const caps = {
   textTransform: 'uppercase',
-  letterSpacing: '.1em'
+  letterSpacing: '.2em'
 }
 
-const colors = {
-  red: '#e54',
-  blue: '#059',
-  green: '#0b7',
-  midgray: '#444',
-  gray: '#eee'
-}
-
-export default {
-  fontFamily: 'Palatino, Georgia, serif',
-  color: '#111',
-  backgroundColor: '#fff',
+const dark = {
+  name: 'Dark',
+  fontFamily: '"Avenir Next", Helvetica, sans-serif',
+  color: '#eee',
+  backgroundColor: '#111',
+  borderRadius: 5,
+  borderColor: `rgba(255, 255, 255, ${1 / 16})`,
 
   colors: {
     ...config.colors,
-    ...colors,
-    primary: colors.red,
-    error: colors.red,
-    info: colors.blue,
-    success: colors.green,
-    secondary: colors.midgray
+    blue: '#00d9f7',
+    info: '#00d9f7',
+    green: '#0f8',
+    success: '#0f8',
+    orange: '#fb3',
+    warning: '#fb3',
+    primary: '#778',
+    midgray: '#778',
+    gray: '#333339',
+    secondary: '#333339',
+    red: '#f04',
+    error: '#f04'
   },
-
-  borderColor: `rgba(0, 0, 0, ${1 / 8})`,
+  inverted: '#222',
 
   scale: [
-    0, 12, 24, 48, 96
+    0, 10, 20, 40, 80
   ],
 
-  fontSizes: [
-    72, 64, 48, 32, 18, 16, 14
-  ],
-
-  bold: 500,
-
-  Heading_alt: {
-    opacity: 1,
-    ...sans,
-    ...caps,
-    fontSize: 14,
-    color: colors.red
+  Card: {
+    backgroundColor: '#222',
+    border: 0
   },
-
-  Banner: {
-    backgroundColor: '#f6fee6',
-    boxShadow: 'inset 0 0 320px 0 rgba(128, 64, 0, .5), inset 0 0 0 99999px rgba(128, 128, 96, .25)'
-  },
-
-  Toolbar: {
-    color: 'inherit',
-    backgroundColor: '#fff',
-    borderBottom: `1px solid rgba(0, 0, 0, ${1 / 8})`
-  },
-
-  Button: {
-    ...sans,
-    ...caps,
-    fontSize: 12
-  },
-  ButtonOutline: {
-    ...sans,
-    ...caps,
-    fontSize: 12
+  Panel: {
+    borderWidth: 2,
+    backgroundColor: '#000',
+    color: '#00d9f7'
   },
   NavItem: {
-    ...sans,
-    ...caps,
-    fontSize: 12
+    fontSize: 12,
+    ...caps
   },
-  PanelHeader: {
-    ...sans
+  Heading: {
+    ...caps
   },
-  Label: {
-    ...sans,
+  Button: {
     ...caps,
     fontSize: 12,
-    opacity: 5 / 8
+    color: '#00d9f7',
+    opacity: 7 / 8
   },
-  SequenceMap: {
-    ...sans,
+  ButtonOutline: {
     ...caps,
-    fontSize: 12
+    fontSize: 12,
+    color: '#00d9f7',
+    opacity: 7 / 8
   },
-  Donut: {
-    ...sans
+  Toolbar: {
+    minHeight: 64,
+    color: '#00d9f7',
+    backgroundColor: `rgba(0, 0, 0, ${7 / 8})`
   },
-  Stat: {
-    ...sans
+  Label: { opacity: 5 / 8 },
+  Menu: {
+    color: '#00d9f7',
+    backgroundColor: '#000'
   },
-  Breadcrumbs: {
-    ...sans,
-    color: '#e54'
+  Message: {
+    color: '#111',
+    opacity: 15 / 16
   },
-
-  PageHeader: {
-    borderColor: '#e54'
+  Text: {
+    opacity: 7 / 8
   },
-  SectionHeader: {
-    borderColor: '#e54'
+  Footer: {
+    opacity: 1 / 2
   }
 }
+
+export default dark

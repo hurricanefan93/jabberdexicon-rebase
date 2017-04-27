@@ -5,8 +5,8 @@ import WordOfTheDay from './WordOfTheDay'
 const Home = () =>
   <div className='Home'>
     <PageHeader
-      heading='Welcome the Jabberdexicon!'
-      description='A little glossary of jargon'
+      heading='Welcome to the Jabberdexicon'
+      description='A glossary of tech terms'
       m={1}
     />
     <WordOfTheDay />
